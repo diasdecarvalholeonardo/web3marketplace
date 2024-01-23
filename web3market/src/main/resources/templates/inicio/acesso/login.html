@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Centrada</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    table {
+      width: 500px;
+      height: 400px;
+      border: 1px solid #000; /* Adicione uma borda para visualização */
+    }
+
+    td {
+      text-align: center; /* Centraliza o conteúdo da célula */
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <!-- Seus dados da tabela aqui -->
+    <tr>
+      <td><img th:src="@{/imagens/index/login_175x39.jpg}" alt="login_175x39"></td>
+    </tr>
+    <tr>
+      <td>E-mail ou número de telefone celular</td>
+    </tr>    
+    <tr>
+      <td><p>Ao continuar, você concorda com as Condições de Uso da Amazon. Por favor verifique a Notificação de Privacidade, Notificação de Cookies e a notificação de Anúncios Baseados em Interesse.</p></td>
+    </tr>
+    <tr>
+      <td>Conteúdo da célula 1</td>
+    </tr>
+    <tr>
+      <td>Conteúdo da célula 2</td>
+    </tr>    
+    <tr>
+      <td>Conteúdo da célula 3</td>
+    </tr>
+    <!-- Adicione mais linhas e células conforme necessário -->
+  </table>
+</body>
+</html>

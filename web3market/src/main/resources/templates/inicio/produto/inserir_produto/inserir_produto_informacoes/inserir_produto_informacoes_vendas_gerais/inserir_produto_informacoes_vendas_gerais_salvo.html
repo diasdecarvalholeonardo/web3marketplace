@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Preenchido</title>
+</head>
+<body>
+    <h1>Formulário Preenchido</h1>
+
+<table>
+	
+        <tr>
+            <td>Produtos Selecionados:</td>            
+            <td th:text="${w3E_3.produtoSelecionado}" th:field="*{produtoSelecionado}"></td>
+        </tr>
+	
+        <tr>
+            <td>Categorias de Produtos Selecionados:</td>            
+            <td th:text="${w3E_3.produtoSelecionado_categoria}" th:field="*{produtoSelecionado_categoria}"></td>
+        </tr>
+	
+        <tr>
+            <td>Moda dos Produtos Selecionados:</td>            
+            <td th:text="${w3E_3.modaPreco_produtoSelecionado_categoria}" th:field="*{modaPreco_produtoSelecionado_categoria}"></td>
+        </tr>
+	
+        <tr>
+            <td>Categoria dos Produtos Selecionados adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_3.produtoSelecionado_categoria_adCarrinho}" th:field="*{produtoSelecionado_categoria_adCarrinho}"></td>
+        </tr>
+	
+        <tr>
+            <td>Moda dos Preços dos Produtos Selecionados adicionados ao Carrinho de Compra:</td>            
+            <td th:text="${w3E_3.modaPreco_ProdutoSelecionado_categoria_adCarrinho}" th:field="*{modaPreco_ProdutoSelecionado_categoria_adCarrinho}"></td>
+        </tr>
+     	
+        <tr>
+            <td>Produtos Selecionados por Categoria adicionado ao Carrinho e vendidos:</td>            
+            <td th:text="${w3E_3.produtoSelecionado_categoria_adCarrinho_vendido}" th:field="*{produtoSelecionado_categoria_adCarrinho_vendido}"></td>
+        </tr>  
+<!-- 7--> 	
+        <tr>
+            <td>Moda dos Preços dos Produtos Selecionados Comprados adicionados ao Carrinho de Compra:</td>            
+            <td th:text="${w3E_3.modaPreco_ProdutoSelecionado_adCarrinho_vendido}" th:field="*{modaPreco_ProdutoSelecionado_adCarrinho_vendido}"></td>
+        </tr>
+  	
+        <tr>
+            <td>Preferencia Geral:</td>            
+            <td th:text="${w3E_3.PreferenciaGeral}" th:field="*{PreferenciaGeral}"></td>
+        </tr>
+  	
+        <tr>
+            <td>Moda da Preferencia Geral:</td>            
+            <td th:text="${w3E_3.moda_PreferenciaGeral}" th:field="*{moda_PreferenciaGeral}"></td>
+        </tr>
+  	
+        <tr>
+<!-- 10-->  <td>Grau de Preferência Geral:</td>            
+            <td th:text="${w3E_3.grau_preferencia}" th:field="*{grau_preferencia}"></td>
+        </tr>
+  	
+        <tr>
+<!-- 11-->  <td>Média dos Precos dos Produtos Individuais adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_3.mediaPreco_Produtoindividual_adCarrinho}" th:field="*{mediaPreco_Produtoindividual_adCarrinho}"></td>
+        </tr>
+  	
+        <tr>
+<!-- 12-->  <td>Tendência dos Precos dos Produtos Individuais adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_3.moda_mediaPreco_Produtoindividual_adCarrinho}" th:field="*{moda_mediaPreco_Produtoindividual_adCarrinho}"></td>
+        </tr>
+  	
+        <tr>
+<!-- 13-->  <td>Média dos Precos dos Produtos adicionados ao Carrinho e vendidos:</td>            
+            <td th:text="${w3E_3.mediaPreco_Produtoindividual_adCarrinho_vendido}" th:field="*{mediaPreco_Produtoindividual_adCarrinho_vendido}"></td>
+        </tr>
+   	
+        <tr>
+<!-- 14-->  <td>Tendência dos Precos dos Produtos Individuais adicionados ao Carrinho e vendido:</td>            
+            <td th:text="${w3E_3.moda_mediaPreco_Produtoindividual_adCarrinho_vendido}" th:field="*{moda_mediaPreco_Produtoindividual_adCarrinho_vendido}"></td>
+        </tr>
+
+ </table>
+ <table>
+	 <form th:action="@{/inicio/index}" method="post">
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>    
+    <a th:href="@{/inicio/formulario}">Voltar para o Formulário</a>
+</body>
+</html>

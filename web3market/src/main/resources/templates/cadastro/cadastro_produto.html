@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Produto</title>
+</head>
+<body>
+    <h1>Formulário de Produto</h1>
+    <form th:action="@{/exibeDadosFormulario}" method="post">
+<table>
+	<tr>        
+        <td>
+            <label for="numero_funcionario_produto">Número do Funcionário:</label>
+        </td>
+        <td>
+            <input type="text" id="numero_funcionario_produto" name="numero_funcionario_produto">
+        </td>
+    </tr>
+	<tr>        
+        <td>
+            <label for="nome_cliente">Nome do Cliente:</label>
+        </td>
+        <td>
+			<input type="text" id="nome_cliente" name="nome_cliente">
+        </td>
+    </tr>
+	<tr>        
+        <td>
+            <label for="cpf_cliente">CPF do Cliente:</label>
+        </td>
+        <td>
+			<input type="text" id="cpf_cliente" name="cpf_cliente">
+        </td>
+    </tr>  
+    	<tr>        
+        <td>
+            <label for="numero_fornecedor">Número do Fornecedor:</label>
+        </td>
+        <td>
+            <input type="text" id="numero_fornecedor" name="numero_fornecedor">
+        </td>
+    </tr>   
+ 
+    <tr>        
+        <td>
+            <label for="nome_fornecedor">Nome do Fornecedor:</label>
+        </td>
+        <td>
+            <input type="text" id="nome_fornecedor" name="nome_fornecedor">
+        </td>
+    </tr> 
+  
+    <tr>        
+        <td>
+            <label for="produto_preco">Preço do Produto:</label>           
+        </td>
+        <td>
+            <input type="text" id="produto_preco" name="produto_preco">
+        </td>
+    </tr> 
+ 
+    <tr>        
+        <td>
+            <label for="produto_warehouseAddress">Endereço do Produto:</label>
+        </td>
+        <td>
+			<input type="text" id="produto_warehouseAddress" name="produto_warehouseAddress">
+        </td>
+    </tr> 
+ 
+    <tr>        
+        <td>
+            <label for="produto_tamanho">Tamanho do Produto:</label>
+        </td>
+        <td>
+			<input type="text" id="produto_tamanho" name="produto_tamanho">
+        </td>
+    </tr> 
+  
+    <tr>        
+        <td>
+            <label for="quantidade_produto">Quantidade do Produto:</label>
+        </td>
+        <td>
+            <input type="text" id="quantidade_produto" name="quantidade_produto">
+        </td>
+     </tr> 
+ 
+    <tr>        
+        <td>
+            <label for="data_entrada_produto">Data de Entrada do Produto:</label>
+        </td>
+        <td>
+            <input type="text" id="data_entrada_produto" name="data_entrada_produto">
+        </td>
+     </tr> 
+ 
+    <tr>        
+        <td>
+            <label for="data_saida_produto">Data de Saída do Produto:</label>
+        </td>
+        <td>
+             <input type="text" id="data_saida_produto" name="data_saida_produto">
+        </td>
+     </tr> 
+ 
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>
+    
+</table>
+</body>
+</html>

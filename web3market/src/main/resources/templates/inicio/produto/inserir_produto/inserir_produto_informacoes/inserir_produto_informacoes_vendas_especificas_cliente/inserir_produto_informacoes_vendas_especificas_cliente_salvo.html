@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Preenchido</title>
+</head>
+<body>
+    <h1>Formulário Preenchido</h1>
+
+<table>
+	
+            <tr>
+            <td>CPF:</td>            
+            <td th:text="${w3E_2.cpf_cliente}" th:field="*{cpf_cliente}"></td>
+            </tr>
+    
+	        <tr>
+            <td>Produtos Selecionados:</td>            
+            <td th:text="${w3E_2.produtoSelecionado}" th:field="*{produtoSelecionado}"></td>
+            </tr>
+     
+	        <tr>
+            <td>Categoria dos Produtos Selecionados adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_2.produtoSelecionado_categoria_adCarrinho}" th:field="*{produtoSelecionado_categoria_adCarrinho}"></td>
+            </tr>
+     
+	        <tr>
+            <td>Média de Preços Individual dos Produtos Selecionados adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_2.mediaPreco_Produtoindividual_adCarrinho}" th:field="*{mediaPreco_Produtoindividual_adCarrinho}"></td>
+            </tr>
+     
+	        <tr>
+            <td>Moda dos Preços Individuais dos Produtos Selecionados adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_2.modaPreco_Produtoindividual_adCarrinho}" th:field="*{modaPreco_Produtoindividual_adCarrinho}"></td>
+            </tr>
+     
+	        <tr>
+            <td>Preço mais Barato de Produto Indicidual adicionado ao Carrinho:</td>            
+            <td th:text="${w3E_2.PrecoMaisBarato_Produtoindividual_adCarrinho}" th:field="*{PrecoMaisBarato_Produtoindividual_adCarrinho}"></td>
+            </tr>
+   
+	        <tr>
+            <td>Moda dos Preços mais Baratos dos Produtos Individuais adicionado ao Carrinho:</td>            
+            <td th:text="${w3E_2.modaPreco_PrecoMaisBarato_Produtoindividual_adCarrinho}" th:field="*{modaPreco_PrecoMaisBarato_Produtoindividual_adCarrinho}"></td>
+            </tr>
+     
+	        <tr>
+            <td>Preço mais Caro de Produto Indicidual adicionado ao Carrinho:</td>            
+            <td th:text="${w3E_2.PrecoMaisCaro_Produtoindividual_adCarrinho}" th:field="*{PrecoMaisCaro_Produtoindividual_adCarrinho}"></td>
+            </tr>
+      
+	        <tr>
+            <td>Moda dos Preços mais Caros dos Produtos Selecionados adicionados ao Carrinho:</td>            
+            <td th:text="${w3E_2.modaPreco_PrecoMaisCaro_Produtoindividual_adCarrinho}" th:field="*{modaPreco_PrecoMaisCaro_Produtoindividual_adCarrinho}"></td>
+            </tr>
+       
+	        <tr>
+            <td>Produtos Selecionados adicionados ao Carrinho e Vendido:</td>            
+            <td th:text="${w3E_2.produtoSelecionado_categoria_adCarrinho_comprei}" th:field="*{produtoSelecionado_categoria_adCarrinho_comprei}"></td>
+            </tr>
+       
+	        <tr>
+            <td>Categoria da Prefeência dos Produtos Selecionados:</td>            
+            <td th:text="${w3E_2.tipoProduto_PreferenciaPessoal}" th:field="*{tipoProduto_PreferenciaPessoal}"></td>
+            </tr>
+       
+	        <tr>
+            <td>Preferencia Pessoal:</td>            
+            <td th:text="${w3E_2.PreferenciaPessoal}" th:field="*{PreferenciaPessoal}"></td>
+            </tr>
+        
+	        <tr>
+            <td>Grau de Preferência Geral:</td>            
+            <td th:text="${w3E_2.grau_preferencia}" th:field="*{grau_preferencia}"></td>
+            </tr>
+
+ </table>
+ <table>
+	 <form th:action="@{/inicio/index}" method="post">
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>    
+    <a th:href="@{/inicio/formulario}">Voltar para o Formulário</a>
+</body>
+</html>

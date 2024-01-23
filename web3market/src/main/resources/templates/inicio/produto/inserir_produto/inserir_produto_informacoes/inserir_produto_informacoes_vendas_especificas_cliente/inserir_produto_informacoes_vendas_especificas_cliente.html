@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos mais Procurados pelo Cliente</title>
+</head>
+<body>
+    <h1>Produtos mais Procurados por Você:</h1>
+    <form th:action="@{/inicio/produto/inserir_produto/inserir_produto_informacoes/inserir_produto_informacoes_vendas_especificas_cliente/inserir_produto_informacoes_vendas_especificas_cliente_confirmar}" method="post">
+<table>
+	
+	<tr>        
+        <td>
+            <label for="cpf_cliente">CPF:</label>
+        </td>
+        <td>
+            <input type="text" id="cpf_cliente" name="cpf_cliente" th:required="true">
+        </td>
+    </tr>
+    
+	<tr>        
+        <td>
+            <label for="produtoSelecionado">Produtos Selecionados:</label>
+        </td>
+        <td>
+			<input type="text" id="produtoSelecionado" name="produtoSelecionado" th:required="true">
+        </td>
+    </tr>
+    
+	<tr>        
+        <td>
+            <label for="produtoSelecionado_categoria_adCarrinho">Categoria dos Produtos Selecionados adicionados ao Carrinho:</label>
+        </td>
+        <td>
+			<input type="text" id="produtoSelecionado_categoria_adCarrinho" name="produtoSelecionado_categoria_adCarrinho" th:required="true">
+        </td>
+    </tr>  
+    
+    	<tr>        
+        <td>
+            <label for="mediaPreco_Produtoindividual_adCarrinho">Méia de Preços Individual dos Produtos Selecionados adicionados ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="mediaPreco_Produtoindividual_adCarrinho" name="mediaPreco_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr>   
+ 
+    <tr>        
+        <td>
+            <label for="modaPreco_Produtoindividual_adCarrinho">Moda dos Preços Individuais dos Produtos Selecionados adicionados ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="modaPreco_Produtoindividual_adCarrinho" name="modaPreco_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr> 
+  
+    <tr>        
+        <td>
+            <label for="PrecoMaisBarato_Produtoindividual_adCarrinho">Preço mais Barato de Produto Individual adicionado ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="PrecoMaisBarato_Produtoindividual_adCarrinho" name="PrecoMaisBarato_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr> 
+  
+    <tr>        
+        <td>
+            <label for="modaPreco_PrecoMaisBarato_Produtoindividual_adCarrinho">Moda dos Preços mais Baratos dos Produtos Individuais adicionado ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="modaPreco_PrecoMaisBarato_Produtoindividual_adCarrinho" name="modaPreco_PrecoMaisBarato_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr> 
+    
+    <tr>        
+        <td>
+            <label for="PrecoMaisCaro_Produtoindividual_adCarrinho">Preço mais Caro de Produto Indicidual adicionado ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="PrecoMaisCaro_Produtoindividual_adCarrinho" name="PrecoMaisCaro_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr> 
+  
+    <tr>        
+        <td>
+            <label for="modaPreco_PrecoMaisCaro_Produtoindividual_adCarrinho">Moda dos Preços mais Caros dos Produtos Selecionados adicionados ao Carrinho:</label>
+        </td>
+        <td>
+            <input type="text" id="modaPreco_PrecoMaisCaro_Produtoindividual_adCarrinho" name="modaPreco_PrecoMaisCaro_Produtoindividual_adCarrinho" th:required="true">
+        </td>
+    </tr> 
+   
+    <tr>        
+        <td>
+            <label for="produtoSelecionado_categoria_adCarrinho_comprei">Produtos Selecionados adicionados ao Carrinho e Vendido:</label>
+        </td>
+        <td>
+            <input type="text" id="produtoSelecionado_categoria_adCarrinho_comprei" name="produtoSelecionado_categoria_adCarrinho_comprei" th:required="true">
+        </td>
+    </tr> 
+    
+    <tr>        
+        <td>
+            <label for="tipoProduto_PreferenciaPessoal">Prefeência dos Produtos Selecionados:</label>
+        </td>
+        <td>
+            <input type="text" id="tipoProduto_PreferenciaPessoal" name="tipoProduto_PreferenciaPessoal" th:required="true">
+        </td>
+    </tr> 
+   
+    <tr>        
+        <td>
+            <label for="PreferenciaPessoal">Preferencia Pessoal:</label>
+        </td>
+        <td>
+            <input type="text" id="PreferenciaPessoal" name="PreferenciaPessoal" th:required="true">
+        </td>
+    </tr> 
+
+    <tr>        
+        <td>
+            <label for="grau_preferencia">Grau de Preferência Geral:</label>
+        </td>
+        <td>
+            <input type="text" id="grau_preferencia" name="grau_preferencia" th:required="true">
+        </td>
+    </tr> 
+    
+ </table>
+ <table>
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>
+    
+</table>
+</body>
+</html>

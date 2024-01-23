@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Produto</title>
+</head>
+<body>
+    <h1>Cadastro de Cliente</h1>
+    <form th:action="@{/inicio/cliente/dados_cliente/entrada_dados_salvo.html}" method="post">
+<table>
+	   
+<tr>        
+  <th>Nome do Cliente:</th>
+  <td th:text="${w3E_5.nome_cliente}" th:field="*{nome_cliente}"></td>
+  <td><input type="hidden" th:field="*{nome_cliente}"></td>   
+</tr>
+    
+<tr>        
+  <th>CPF:</th>
+  <td th:text="${w3E_5.cpf_cliente}" th:field="*{cpf_cliente}"></td>
+  <td><input type="hidden" th:field="*{cpf_cliente}"></td>   
+</tr>
+    
+<tr>        
+  <th>Whatsapp:</th>
+  <td th:text="${w3E_5.whatsapp_cliente}" th:field="*{whatsapp_cliente}"></td>
+  <td><input type="hidden" th:field="*{whatsapp_cliente}"></td>   
+</tr>
+    
+<tr>        
+  <th>Email:</th>
+  <td th:text="${w3E_5.email_cliente}" th:field="*{email_cliente}"></td>
+  <td><input type="hidden" th:field="*{email_cliente}"></td>   
+</tr>
+  
+<tr>        
+  <th>Telefone:</th>
+  <td th:text="${w3E_5.telefone_cliente}" th:field="*{telefone_cliente}"></td>
+  <td><input type="hidden" th:field="*{telefone_cliente}"></td>   
+</tr>
+  
+<tr>        
+  <th>Endereço Residêncial:</th>
+  <td th:text="${w3E_5.endereco_residencial_cliente}" th:field="*{endereco_residencial_cliente}"></td>
+  <td><input type="hidden" th:field="*{endereco_residencial_cliente}"></td>   
+</tr>
+ 
+<tr>        
+  <th>Endereço de Entrega:</th>
+  <td th:text="${w3E_5.endereco_entrega_cliente}" th:field="*{endereco_entrega_cliente}"></td>
+  <td><input type="hidden" th:field="*{endereco_entrega_cliente}"></td>   
+</tr>
+  
+<tr>        
+  <td>
+    <label for="detalhes">Detalhes:</label>
+  </td>
+  <td>
+    <input type="text" id="detalhes" name="detalhes" th:required="true">
+  </td>
+</tr> 
+ 
+<tr>        
+  <th>Detalhes:</th>
+  <td th:text="${w3E_5.detalhes}" th:field="*{detalhes}"></td>
+  <td><input type="hidden" th:field="*{detalhes}"></td>   
+</tr>
+
+ </table>
+ 
+ <table>
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>
+    
+</table>
+</body>
+</html>

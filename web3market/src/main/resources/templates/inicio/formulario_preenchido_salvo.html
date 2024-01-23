@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Preenchido</title>
+</head>
+<body>
+    <h1>Formulário Preenchido</h1>
+
+
+
+    <table>
+        <tr>
+            <th>Número do Funcionário:</th>
+            <td th:text="${w3E.numero_funcionario_produto}" th:field="*{numero_funcionario_produto}"></td>
+
+        </tr>
+
+        <tr>
+            <th>Nome do Cliente:</th>
+            <td th:text="${w3E.nome_cliente}" th:field="*{nome_cliente}"></td>
+        </tr>
+
+        <tr>
+            <th>CPF do Cliente:</th>
+            <td th:text="${w3E.cpf_cliente}" th:field="*{cpf_cliente}"></td>
+        </tr>
+        
+        <tr>
+            <th>Número do Fornecedor:</th>
+            <td th:text="${w3E.numero_fornecedor}" th:field="*{numero_fornecedor}"></td>
+        </tr>
+        <tr>
+            <th>Nome do Fornecedor:</th>
+            <td th:text="${w3E.nome_fornecedor}" th:field="*{nome_fornecedor}"></td>
+        </tr>
+        <tr>
+            <th>Preço do Produto:</th>
+            <td th:text="${w3E.produto_preco}" th:field="*{produto_preco}"></td>
+        </tr>
+        <tr>
+            <th>Endereço do Produto:</th>
+            <td th:text="${w3E.produto_warehouseAddress}" th:field="*{produto_warehouseAddress}"></td>
+        </tr>
+        <tr>
+            <th>Tamanho do Produto:</th>
+            <td th:text="${w3E.produto_tamanho}" th:field="*{produto_tamanho}"></td>
+        </tr>
+        <tr>
+            <th>Quantidade do Produto:</th>
+            <td th:text="${w3E.quantidade_produto}" th:field="*{quantidade_produto}"></td>
+        </tr>
+        <tr>
+            <th>Data de Entrada do Produto:</th>
+            <td th:text="${w3E.data_entrada_produto}" th:field="*{data_entrada_produto}"></td>
+        </tr>
+        <tr>
+            <th>Data de Saída do Produto:</th>
+            <td th:text="${w3E.data_saida_produto}" th:field="*{data_saida_produto}"></td>
+        </tr>
+        <tr>
+            <th>Detalhes:</th>
+            <td th:text="${w3E.detalhes}" th:field="*{detalhes}"></td>
+        </tr>
+    </table>
+<form th:action="@{/inicio/index}" method="post" th:object="${w3E}">
+    <button type="submit">Salvar Dados</button>    
+</form>    
+    
+</body>
+</html>

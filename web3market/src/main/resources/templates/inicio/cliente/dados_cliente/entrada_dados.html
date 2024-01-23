@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Produto</title>
+</head>
+<body>
+    <h1>Cadastro de Cliente</h1>
+    <form th:action="@{/inicio/cliente/dados_cliente/entrada_dados_confirmar.html}" method="post">
+<table>
+	   
+<tr>        
+  <td>
+    <label for="nome_cliente">Nome do Cliente:</label>
+  </td>
+  <td>
+	<input type="text" id="nome_cliente" name="nome_cliente" th:required="true">
+  </td>
+</tr>
+    
+<tr>        
+  <td>
+    <label for="cpf_cliente">CPF:</label>
+  </td>
+  <td>
+	<input type="text" id="cpf_cliente" name="cpf_cliente" th:required="true">
+  </td>
+</tr>  
+    
+<tr>        
+  <td>
+    <label for="whatsapp_cliente">Whatsapp:</label>
+  </td>
+  <td>
+    <input type="text" id="whatsapp_cliente" name="whatsapp_cliente" th:required="true">
+  </td>
+</tr>   
+ 
+<tr>        
+  <td>
+    <label for="email_cliente">Email:</label>
+  </td>
+  <td>
+    <input type="text" id="email_cliente" name="email_cliente" th:required="true">
+  </td>
+</tr> 
+  
+<tr>        
+  <td>
+    <label for="telefone_cliente">Telefone:</label>           
+  </td>
+  <td>
+    <input type="text" id="telefone_cliente" name="telefone_cliente" th:required="true">
+  </td>
+</tr> 
+  
+<tr>        
+  <td>
+    <label for="produto_preco">Endereço Residêncial:</label>           
+  </td>
+  <td>
+    <input type="text" id="produto_preco" name="produto_preco" th:required="true">
+  </td>
+</tr> 
+  
+<tr>        
+  <td>
+    <label for="produto_preco">Endereço de Entrega:</label>           
+  </td>
+  <td>
+    <input type="text" id="produto_preco" name="produto_preco" th:required="true">
+  </td>
+</tr> 
+ 
+<tr>        
+  <td>
+    <label for="detalhes">Detalhes:</label>
+  </td>
+  <td>
+    <input type="text" id="detalhes" name="detalhes" th:required="true">
+  </td>
+</tr> 
+
+ </table>
+ 
+ <table>
+    <tr>        
+        <td>        
+        <button type="submit">Enviar</button>
+        </td>
+     </tr> 
+           
+    </form>
+    
+</table>
+</body>
+</html>

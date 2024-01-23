@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<script src= 
+        "https://code.jquery.com/jquery-3.5.1.min.js"> 
+    </script>
+    
+<style type="text/css">
+html, body {
+	margin:0;
+	padding:0;
+	height:100%
+}
+body {background:#fff;}
+.wrap {
+	display:table;
+	width:100%;
+	width:980px;
+	height:500px;
+	margin:auto;
+	border-collapse:collapse;
+	table-layout:fixed;
+	height:100%;/* we can use 100% here in stead of min-height because display:table always treats height as a minimum and will automatically accomodate content*/
+}
+
+.content { 
+            position: absolute; 
+            top: 27%; 
+            left: 78%; 
+            transform: translate(-50%, -50%); 
+            width: 450px; 
+            height: 250px; 
+            text-align: center; 
+            background-color: #CCD6F1; 
+            padding: 0px; 
+            z-index: 100; 
+            display: none;
+            /*to hide popup initially*/ 
+} 
+
+.top-area {
+  height: 7%;
+  background-color: #fff;
+  text-align: top;
+}
+
+.down-area {
+	background-color: #99D9EA;
+  height: 90%;
+  display: flex;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+  padding: 10px;
+}
+
+.left-side {
+  background-color: #f0f0f0;
+}
+
+.right-side {
+  background-color: #e0e0e0;
+}
+
+.link-text {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<title>SF Uniformes</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2-beta3/css/bootstrap.min.css}" />
+</head>
+
+<body>
+<center>	
+<table width="100%">
+
+<table>
+
+<tr>
+<td >	
+<img th:src="@{/imagens/index/SF_Uniformes_179x66.png}" alt="Imagem SF Uniformes" >
+</td>
+<td >	
+<img th:src="@{/imagens/index/local_entrega.jpg}" alt="local_entrega" >
+<center>Local de Entrega:</center>
+</td>
+
+<td width="10%" >
+<h3>Produtos:</h3>
+    <select>
+        <option th:each="produto : ${produtos}" th:value="${produto.id}" th:text="${produto.numero_funcionario_produto}"></option>
+    </select>
+</td>
+
+<td width="50%">
+<center>
+<h3>Busca de Produtos:</h3>
+</center>
+    <select>
+        <option th:each="endereco_entrega_cliente : ${enderecoEntregaCliente}" th:value="${endereco_entrega_cliente.id}" th:text="${endereco_entrega_cliente.endereco_entrega_cliente}"></option>
+    </select>
+</td>
+
+<td >	
+<center>
+	<img th:src="@{/imagens/index/login_175x75.jpg}" alt="login_175x75"  onclick="togglePopup()"/>
+</center>
+</td>
+
+<td >	
+<center>teste de saída_4b</center>
+</td>
+<td >	
+<center>teste de saída_5b</center>
+</td>
+<td>	
+<center>teste de saída_6b</center>
+</td>
+<td>	
+<center>teste de saída_6b</center>
+</td>
+</tr>
+
+</table>
+
+<table>
+
+<tr>
+<td>	
+<center>teste de saída_1b</center>
+</td>
+<td>	
+<center>teste de saída_2b</center>
+</td>
+<td>	
+<center>teste de saída_3b</center>
+</td>
+<td>	
+<center>teste de saída_4b</center>
+</td>
+<td>	
+<center>teste de saída_5b</center>
+</td>
+<td>	
+<center>teste de saída_6b</center>
+</td>
+</tr>
+
+</table>
+
+<table>
+
+<tr>
+<td>	
+<center>teste de saída_1b</center>
+</td>
+<td>	
+<center>teste de saída_2b</center>
+</td>
+<td>	
+<center>teste de saída_3b</center>
+</td>
+<td>	
+<center>teste de saída_4b</center>
+</td>
+<td>	
+<center>teste de saída_5b</center>
+</td>
+<td>	
+<center>teste de saída_6b</center>
+</td>
+</tr>
+
+</table>
+<table>
+	
+<tr>
+<td>	
+<center>teste de saída_1b</center>
+</td>
+<td>	
+<center>teste de saída_2b</center>
+</td>
+<td>	
+<center>teste de saída_3b</center>
+</td>
+<td>	
+<center>teste de saída_4b</center>
+</td>
+<td>	
+<center>teste de saída_5b</center>
+</td>
+<td>	
+<center>teste de saída_6b</center>
+</td>
+</tr>
+
+</table>
+
+</table>
+</center>
+
+<div class="content">
+  <div onclick="togglePopup()" class="close-btn"></div>
+    
+<div class="top-area">
+  <div><img th:src="@{/imagens/index/seta_1.jpg}" alt="seta_1" width="17px" height="17px"></div>
+</div>
+   <div>
+	  
+<a href="inicio/acesso/login.html">
+<div>
+<img th:src="@{/imagens/index/login_175x39.jpg}" alt="login_175x39">
+</div>
+</a>
+
+	  <img th:src="@{/imagens/index/CaddastroNovo_175x39.jpg}" alt="CaddastroNovo_175x39" width="135" height="30">
+	  <img th:src="@{/imagens/index/CaddastroAlterar_175x39.jpg}" alt="CaddastroAlterar_175x39" width="135" height="30">
+  </div>
+  
+  <div class="down-area">
+    <div class="left-side">
+	  <h3>Sua Lista de Preferidos</h3>
+      <a href="#">
+		  <img th:src="@{/imagens/index/Lista_preferidos_175x39.jpg}" alt="Lista_preferidos_175x39" width="135" height="30">
+     </a><br>
+            <a href="#">
+		  <img th:src="@{/imagens/index/Lista_presentes_175x39.jpg}" alt="Lista_presentes_175x39" width="135" height="30">
+     </a><br>
+    </div>
+    <div class="right-side">
+		<h3>Sua Conta Pessoal</h3>
+      <a href="#">
+		  <img th:src="@{/imagens/index/Sua_Conta_175x39.jpg}" alt="Sua_Conta_175x39" width="135" height="30">
+     </a><br>
+            <a href="#">
+		  <img th:src="@{/imagens/index/Suas_Ordens_Anteriores_175x39.jpg}" alt="Suas_Ordens_Anteriores_175x39" width="135" height="30">
+     </a><br>
+           <a href="#">
+		  <img th:src="@{/imagens/index/Suas_Recomendacoes_175x39.jpg}" alt="Suas_Recomendacoes_175x39" width="135" height="30">
+     </a><br>
+            <a href="#">
+		  <img th:src="@{/imagens/index/Suas_Ordens_Anteriores_175x39.jpg}" alt="Suas_Ordens_Anteriores_175x39" width="135" height="30">
+     </a><br>
+    </div>
+  </div>
+</div>
+  
+    <script type="text/javascript"> 
+      
+        // Function to show and hide the popup 
+        function togglePopup() { 
+            $(".content").toggle(); 
+        } 
+    </script> 
+
+</body>
+</html>
